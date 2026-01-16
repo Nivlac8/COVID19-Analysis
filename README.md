@@ -57,7 +57,7 @@ FROM
     covid_data
 WHERE 
     location != 'World';
-
+```
 ### ⚙️ Methodology (How I Built This)
 1.  **Data Extraction:** Downloaded global COVID-19 data (approx. 85k rows) from the "Our World in Data" repository.
 2.  **Data Cleaning (SQL):** Imported raw CSVs into MySQL. Used SQL commands to handle missing values and filter out "World/Continent" aggregates to ensure accurate country-level analysis.
