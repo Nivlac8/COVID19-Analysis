@@ -1,5 +1,10 @@
 # 🦠 COVID-19 Global Trends Analysis
 
+![COVID-19 Dashboard Preview](covid-dashboard.png)
+*(A snapshot of the Power BI Dashboard visualizing global infection trends)*
+
+---
+
 ### 📊 Project Overview
 A comprehensive data analysis project exploring global COVID-19 metrics to identify distinct patterns in infection growth, mortality rates, and population impact. This project utilizes **Advanced SQL** to clean and manipulate over **85,000+** records, transforming raw public health data into actionable insights focused on **India** and **Global Benchmarks**.
 
