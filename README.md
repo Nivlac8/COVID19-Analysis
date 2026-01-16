@@ -58,3 +58,22 @@ FROM
     covid_data
 WHERE 
     location != 'World';
+
+```
+
+**Day-over-Day Change (LAG Function)**
+```sql
+SELECT 
+    location, 
+    date, 
+    new_cases, 
+    LAG(new_cases) OVER (PARTITION BY location ORDER BY date) as Previous_Day_Cases,
+    (new_cases - LAG(new_cases) OVER (PARTITION BY location ORDER BY date)) as Daily_Change
+FROM 
+    covid_data;
+```
+### ⚙️ Methodology (How I Built This)
+1.  **Data Extraction:** Downloaded global COVID-19 data (approx. 85k rows) from the "Our World in Data" repository.
+2.  **Data Cleaning (SQL):** Imported raw CSVs into MySQL. Used SQL commands to handle missing values and filter out "World/Continent" aggregates to ensure accurate country-level analysis.
+3.  **Calculation:** Wrote complex SQL queries using `Window Functions` and `CTEs` to generate new metrics like "Rolling Infection Count" and "Daily Infection Velocity."
+4.  **Visualization:** Exported the processed SQL tables into Power BI to build the interactive dashboard seen above.
