@@ -1,6 +1,7 @@
 # 🦠 COVID-19 Global Trends Analysis
 
 ![COVID-19 Dashboard Preview](covid-dashboard.png)
+
 *(A snapshot of the Power BI Dashboard visualizing global infection trends)*
 
 ---
